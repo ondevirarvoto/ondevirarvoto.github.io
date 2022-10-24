@@ -30,6 +30,7 @@ table {
 	width: 100%;
 	/* table-layout: fixed; */
 	overflow: hidden;
+	scroll-margin-top: 80px;
 }
 
 table caption {

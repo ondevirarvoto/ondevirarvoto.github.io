@@ -68,9 +68,12 @@ function loadData(query) {
 			tableSection.append(tableViewer);
 			results.data.map((result, index) => {
 				dataToTable({ data: result, index: index });
+			tableViewer.scrollIntoView();
 			});
 		},
 	});
+
+
 }
 
 function setupSelect() {
@@ -99,6 +102,10 @@ function setupSelect() {
 
 		// Once the user selects a state, we unlock and fill the city
 		stateSelector.addEventListener("change", function (d) {
+
+			let tableViewer = document.querySelector("#data-viewer-table");
+			tableViewer?.remove();
+			
 			// Selects the value
 			var value = stateSelector.options[stateSelector.selectedIndex].value;
 
@@ -137,6 +144,7 @@ function setupSelect() {
 
 			console.log(value);
 			loadData(value);
+
 		});
 	});
 }
