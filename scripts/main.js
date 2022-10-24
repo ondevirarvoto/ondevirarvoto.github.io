@@ -2,8 +2,11 @@
 
 function dataToTable({ index, data }) {
 	const table = document.getElementById("data-viewer-table");
-
 	if (index == 0) {
+		let thead = document.createElement("thead");
+		let tbody = document.createElement("tbody");
+		table.append(thead);
+		table.append(tbody);
 		let tr = document.createElement("tr");
 		data.slice(3).map((datum, index) => {
 			let th = document.createElement("th");
@@ -29,8 +32,9 @@ function dataToTable({ index, data }) {
 				tr.append(th);
 			}
 		});
-		table.append(tr);
+		thead.append(tr);
 	} else {
+		let tbody = document.querySelector("tbody");
 		let tr = document.createElement("tr");
 		data.slice(3).map((datum, index) => {
 			let td = document.createElement("td");
@@ -54,8 +58,10 @@ function dataToTable({ index, data }) {
 				tr.append(td);
 			}
 		});
-		table.append(tr);
+		tbody.append(tr);
 	}
+
+	new Tablesort(table);
 }
 
 function loadData(query) {
