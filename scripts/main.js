@@ -8,11 +8,11 @@ function dataToTable({ index, data }) {
 		data.slice(3).map((datum, index) => {
 			let th = document.createElement("th");
 			if (index > 2 && index < 7) {
-				var img = document.createElement("img");
-				img.src = `./assets/images/${datum}.png`;
+				// var img = document.createElement("img");
+				// img.src = `./assets/images/${datum}.png`;
 				var text = document.createElement("p");
 				text.innerHTML = datum;
-				th.append(img);
+				// th.append(img);
 				th.append(text);
 				tr.append(th);
 			} else if (datum == "BAIRRO/LOCALIDADE") {
