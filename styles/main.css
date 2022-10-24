@@ -20,6 +20,7 @@ section[id="selectors"] select {
 section[id="data-viewer"] {
 	max-width: 1500px;
 	margin: auto;
+	margin-top: 10px;
 }
 
 table {

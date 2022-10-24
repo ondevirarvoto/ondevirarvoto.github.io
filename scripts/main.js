@@ -68,8 +68,8 @@ function loadData(query) {
 			tableSection.append(tableViewer);
 			results.data.map((result, index) => {
 				dataToTable({ data: result, index: index });
-			tableViewer.scrollIntoView();
 			});
+			tableViewer.scrollIntoView();
 		},
 	});
 
@@ -105,7 +105,7 @@ function setupSelect() {
 
 			let tableViewer = document.querySelector("#data-viewer-table");
 			tableViewer?.remove();
-			
+
 			// Selects the value
 			var value = stateSelector.options[stateSelector.selectedIndex].value;
 
