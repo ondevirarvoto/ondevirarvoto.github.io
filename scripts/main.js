@@ -47,7 +47,7 @@ function dataToTable({ index, data }) {
 				td.innerHTML = number.toLocaleString("pt-BR") + "%";
 				td.setAttribute("data-type", "number");
 				tr.append(td);
-			}else if(index ==9){
+			}else if(index ==8){
 				let number = (1-Number(datum)) * 100;
 				td.innerHTML = number.toLocaleString("pt-BR") + "%";
 				td.setAttribute("data-type", "number");
