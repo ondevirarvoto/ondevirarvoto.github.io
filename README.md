@@ -1,6 +1,6 @@
 # Como foi feito
 
-O cálculo do IVV é feito de maneira simples para encontrar locais que reúnam, simulanteamente, quatro características:
+O cálculo do IVV é feito de maneira simples para encontrar locais que reúnam, simultaneamente, quatro características:
 
 - Grande número de votos registrados no 1º turno
 - Grande percentual de eleitores de "terceira via", que não votaram em Lula ou em Bolsonaro
