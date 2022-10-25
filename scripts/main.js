@@ -18,7 +18,7 @@ function dataToTable({ index, data }) {
 			} else if (datum == "BAIRRO/LOCALIDADE") {
 				th.innerHTML = "Bairros";
 				tr.append(th);
-			} else if (datum == "ANTI-BOLSONARO") { // mantive para não ter que modificar geral, porém  tem o 1-dataum
+			} else if (datum == "ANTI-LULA") { // mantive para não ter que modificar geral, porém  tem o 1-dataum
 				th.innerHTML = "Não votou no Lula";
 				tr.append(th);
 			} else if (datum == "VALIDOS") {
@@ -39,6 +39,7 @@ function dataToTable({ index, data }) {
 				tr.append(td);
 			} else if (index == 1) {
 				let number = Number(datum).toFixed(2);
+				number = 1-number;
 				td.innerHTML = number.toLocaleString("pt-BR");
 				td.setAttribute("data-type", "number");
 				tr.append(td);
@@ -49,6 +50,7 @@ function dataToTable({ index, data }) {
 				tr.append(td);
 			} else {
 				let number = Number(datum);
+				number = 1-dataum;
 				td.innerHTML = number.toLocaleString("pt-BR");
 				td.setAttribute("data-type", "number");
 				tr.append(td);
