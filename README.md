@@ -16,3 +16,9 @@ Depois, calculou-se a pontuação média de cada bairro nas quatro característi
 Trata-se de uma medida bastante simples que visa encontrar onde são os bairros populosos com um percentual alto de eleitores potencialmente indecisos, mas que moram em áreas propensas a votar em Lula. 
 
 O objetivo é ser uma ferramenta adicional para organizar ações na reta final da campanha, unindo os padrões de votação com o conhecimento cotidiano de quem mora em cada local.
+
+## Desenvolvedores - como executar o site
+
+- Clone ou baixe o código-fonte presente em `https://github.com/ondevirarvoto/ondevirarvoto.github.io`;
+- Abra o terminal no diretório com os arquivos;
+- Execute algum servidor para testes presentes em diferentes linguagens de programação. Por exemplo, em php execute no terminal `php -S localhost:8000` ou em python3, pode utilizar `python3 -m http.server`. Em ambos os casos o site estará disponível em "localhost:8000".
