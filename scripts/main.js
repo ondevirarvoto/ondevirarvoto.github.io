@@ -18,7 +18,7 @@ function dataToTable({ index, data }) {
 			} else if (datum == "BAIRRO/LOCALIDADE") {
 				th.innerHTML = "Bairros";
 				tr.append(th);
-			} else if (datum == "ANTI-Lula") {
+			} else if (datum == "ANTI-BOLSONARO") { // mantive para não ter que modificar geral, porém  tem o 1-dataum
 				th.innerHTML = "Não votou no Lula";
 				tr.append(th);
 			} else if (datum == "VALIDOS") {
@@ -59,7 +59,7 @@ function dataToTable({ index, data }) {
 }
 
 function loadData(query) {
-	Papa.parse(`https://rickrribeiro.github.io/data/csv/${query}.csv`, {
+	Papa.parse(`https://ondevirarvoto.github.io/data/csv/${query}.csv`, {
 		download: true,
 		complete: function (results) {
 			const tableSection = document.getElementById("data-viewer");
