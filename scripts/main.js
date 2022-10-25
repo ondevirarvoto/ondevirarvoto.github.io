@@ -50,7 +50,7 @@ function dataToTable({ index, data }) {
 				tr.append(td);
 			} else {
 				let number = Number(datum);
-				number = 1-dataum;
+				number = 1-number;
 				td.innerHTML = number.toLocaleString("pt-BR");
 				td.setAttribute("data-type", "number");
 				tr.append(td);
