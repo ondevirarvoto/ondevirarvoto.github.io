@@ -61,7 +61,7 @@ function dataToTable({ index, data }) {
 }
 
 function loadData(query) {
-	Papa.parse(`https://ondevirarvoto.github.io/data/csv/${query}.csv`, {
+	Papa.parse(`https://rickrribeiro.github.io//data/csv/${query}.csv`, {
 		download: true,
 		complete: function (results) {
 			const tableSection = document.getElementById("data-viewer");
