@@ -18,8 +18,8 @@ function dataToTable({ index, data }) {
 			} else if (datum == "BAIRRO/LOCALIDADE") {
 				th.innerHTML = "Bairros";
 				tr.append(th);
-			} else if (datum == "ANTI-BOLSONARO") {
-				th.innerHTML = "Não votou no Bolsonaro";
+			} else if (datum == "ANTI-LULA") {
+				th.innerHTML = "Não votou no Lula";
 				tr.append(th);
 			} else if (datum == "VALIDOS") {
 				th.innerHTML = "Votos Válidos";
@@ -38,7 +38,7 @@ function dataToTable({ index, data }) {
 				td.innerHTML = datum;
 				tr.append(td);
 			} else if (index == 1) {
-				let number = Number(datum).toFixed(2);
+				let number = 1-Number(datum).toFixed(2);
 				td.innerHTML = number.toLocaleString("pt-BR");
 				td.setAttribute("data-type", "number");
 				tr.append(td);
@@ -48,7 +48,7 @@ function dataToTable({ index, data }) {
 				td.setAttribute("data-type", "number");
 				tr.append(td);
 			} else {
-				let number = Number(datum);
+				let number = 1-Number(datum);
 				td.innerHTML = number.toLocaleString("pt-BR");
 				td.setAttribute("data-type", "number");
 				tr.append(td);
@@ -59,7 +59,7 @@ function dataToTable({ index, data }) {
 }
 
 function loadData(query) {
-	Papa.parse(`https://ondevirarvoto.github.io/data/csv/${query}.csv`, {
+	Papa.parse(`https://rickrribeiro.github.io/data/csv/${query}.csv`, {
 		download: true,
 		complete: function (results) {
 			const tableSection = document.getElementById("data-viewer");
